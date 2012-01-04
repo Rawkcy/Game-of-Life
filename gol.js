@@ -18,12 +18,12 @@
 
 var game_board = [];
 var evolution_timer;
-var count_down;
+//var count_down;
 
 
-function oneOrZero() {
-    return Math.round(Math.random());
-}
+//function oneOrZero() {
+//    return Math.round(Math.random());
+//}
 
 
 // Create game board
@@ -90,22 +90,22 @@ function print_board() {
 }
 
 
-function countdown() {
-    Array.matrix(0);
-    count_down = 3;
-    // if count = 3 then print 3
-    //
-    // else if count = 2 then print 2 
-    //
-    // else if count = 1 then print 1
-    //
-    // count --;
-}
+//function countdown() {
+//    Array.matrix(0);
+//    count_down = 3;
+//    // if count = 3 then print 3
+//    //
+//    // else if count = 2 then print 2 
+//    //
+//    // else if count = 1 then print 1
+//    //
+//    // count --;
+//}
 
 
 function start() {
     $("div#start").hide(); $("div#game").show();
-    //Array.matrix(function(){return Math.round(Math.random());});
+    Array.matrix(function(){return Math.round(Math.random());});
     print_board();
     evolution_timer = setInterval(function(){$("button#evolution").click();}, 350);
 }
@@ -114,9 +114,10 @@ function start() {
 $(document).ready(function() {
     //once the button is clicked, the setinterval should only execute ONCE
     $("button#start_button").click(function() {
-        if (count_down > 0) countdown();
-        else clearTimeout(count_down_interval); 
-        var count_down_interval = setInterval(function(){this.click();}, 500);
+        //if (count_down > 0) countdown();
+        //else clearTimeout(count_down_interval); 
+        //var count_down_interval = setInterval(function(){this.click();}, 500);
+        start();
     });
     $("button#restart").click(function() {
         if (evolution_timer) {
