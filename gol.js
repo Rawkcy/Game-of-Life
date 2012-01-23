@@ -118,6 +118,8 @@ $(document).ready(function() {
         //else clearTimeout(count_down_interval); 
         //var count_down_interval = setInterval(function(){this.click();}, 500);
         start();
+        $(this).css("display", "none");
+        $("button#restart").css("display", "inline");
     });
     $("button#restart").click(function() {
         if (evolution_timer) {

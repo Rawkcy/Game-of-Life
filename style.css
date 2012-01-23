@@ -1,12 +1,15 @@
 * {
-    margin:0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
-body {
+body, html {
     width: 100%;
     height: 100%;
-    background-image: url("images/bg-tile.jpeg");
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    background-image: url("images/bg-tile.png");
+    color: #b2b2b2;
 }
 
 button {
@@ -16,32 +19,36 @@ button {
     cursor: pointer;
 }
 
-button#evolution, div#game {
+button#evolution, button#restart{
     display: none;
 }
 
-button#start_button {
-    margin-top: 100px;
-    width: 250px;
-    height: 100px;
-    font-size: 30px;
-}
-
-button#restart {
-    margin-top: 0px;
+button#start_button, button#restart {
+    position: relative;
+    margin-top: 15px;
     width: 100px;
-    height: 50px;
-    font-size: 25px;
+    height: 40px;
+    font-size: 17px;
+    padding: 10px 14px;
 }
 
-ul#game_board {
-    margin-top: 70px;
-}
 
-div#start, div#game{
-    margin:0 auto;
+div#game{
+    position: relative;
+    top: 100px;    
     text-align: center;
-    padding: 10px;
+}
+
+div#start {
+    width: 100%;
+    z-index: 100;
+}
+
+div#startBg {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: -1;
 }
 
 ul#game_board {
@@ -53,6 +60,8 @@ ul#game_board {
     top: 100px;
     left: 50%;
     border: 1px black solid;
+    margin-top: 15px;
+    background-color: #b2b2b2;
 }
 
 li {
@@ -63,9 +72,42 @@ li {
 }
 
 li.live {
-    background-color: black;
+    background-color: #6e7272;
 }
 
 li.dead {
-    background-color: white;
+    background-color: #b2b2b2;
+}
+
+button{
+    background-color: #bababa;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#bababa));
+    background-image: -webkit-linear-gradient(top, #545454, #bababa);
+    background-image: -moz-linear-gradient(top, #545454, #bababa);
+    background-image: -ms-linear-gradient(top, #545454, #bababa);
+    background-image: -o-linear-gradient(top, #545454, #bababa);
+    background-image: linear-gradient(top, #545454, #bababa);
+
+    border: 1px solid #545454;
+    color: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.6) inset, 0 1px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.6) inset, 0 1px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.6) inset, 0 1px 0 rgba(0,0,0,.3);
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    padding: 6px 10px 3px 10px;
+    margin: 40px 0px 0px 0px;
+}
+
+button:active
+{
+    -moz-box-shadow: 0 0 3px 1px rgba(0,0,0,.2) inset;
+    -webkit-box-shadow: 0 0 3px 1px rgba(0,0,0,.2) inset;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.2) inset;
+    position: relative;
+    top: 1px;
 }
