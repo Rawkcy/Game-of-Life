@@ -1,0 +1,6 @@
+Conway's Game of Life
+---------------------
+
+Welcome to my [recreation](http://www.catesque.com/gol/gol.html) of Conway's Game of Life done in Javascript!
+
+This was inspired by Code Retreat Toronto where we had several sessions of implementing the game in different languages such as Java, Javascript, Clojure and Python. The sessions included practises such as test-driven development, ping pong coding where the programmers role play as testers and developers trying to ruin each others' lives, and good ol' pair programming.
